@@ -9,7 +9,7 @@ fi
 
 curl -sL "${WPILIB_BUILD_URL}" | \
 tar -Oxzv "WPILib_Linux-${WPILIB_VERSION}/WPILib_Linux-${WPILIB_VERSION}-artifacts.tar.gz" | \
-tar --one-top-level=wpilib-novsc-tmp --wildcards -xzv 'documentation/' 'maven/edu/wpi/first/' 'roborio/' 'LICENSE.md' 'ThirdPartyNotices.txt'
+tar --one-top-level=wpilib-novsc-tmp --wildcards -xzv './documentation/' './maven/edu/wpi/first/' './roborio/' './LICENSE.md' './ThirdPartyNotices.txt'
 
 for f in $(cat extract-list.txt); do
   unzip -o -d wpilib-novsc-tmp "wpilib-novsc-tmp/${f}"
@@ -38,7 +38,7 @@ mkdir ./frc-headers/
 mv ./frc/ ./frc2/ ./wpi/ ./wpinet/ ./wpimath/ ./networktables/ \
   ./units/ ./unsupported/ ./uv/ ./gcem_incl/ ./drake/ ./Eigen/ \
   ./hal/ ./fmt/ ./gcem.hpp ./uv.h ./WPILibVersion.h ./ntcore* \
-  ./cscore* ./FRC_NetworkCommunication/ ./visa/ ./frc-headers/
+  ./FRC_NetworkCommunication/ ./visa/ ./frc-headers/
 mv ./frc-headers/ ../wpilib-novsc-athena/usr/include/frc/
 
 # Move documentation into dist
