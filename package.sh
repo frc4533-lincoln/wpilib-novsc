@@ -48,10 +48,11 @@ mv ./documentation/rtd/* ../wpilib-novsc-docs/frc/
 # Move roborio toolchain into dist
 mv ./roborio/bin/* ../wpilib-novsc-toolchain/usr/bin/
 
-# Remove debug info from roborio sysroot
+# Remove debug info and source code from roborio sysroot
 # Move roborio sysroot into dist
 rm -r ./roborio/arm-nilrt-linux-gnueabi/sysroot/lib/.debug/ \
-  ./roborio/arm-nilrt-linux-gnueabi/sysroot/usr/lib/.debug/
+  ./roborio/arm-nilrt-linux-gnueabi/sysroot/usr/lib/.debug/ \
+  ./roborio/arm-nilrt-linux-gnueabi/sysroot/usr/src/
 mv ./roborio/arm-nilrt-linux-gnueabi/sysroot/* ../wpilib-novsc-sysroot/
 
 cd ../
