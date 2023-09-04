@@ -4,12 +4,12 @@ WPILIB_VERSION="2023.4.3"
 WPILIB_BUILD_URL="https://github.com/wpilibsuite/allwpilib/releases/download/v${WPILIB_VERSION}/WPILib_Linux-${WPILIB_VERSION}.tar.gz"
 
 if [ -e dist ]; then
-  rm -r ./dist/
+  rm -rf ./dist/
 fi
 
 curl -sL "${WPILIB_BUILD_URL}" | \
 tar -Oxzv "WPILib_Linux-${WPILIB_VERSION}/WPILib_Linux-${WPILIB_VERSION}-artifacts.tar.gz" | \
-tar --one-top-level=wpilib-novsc-tmp --wildcards -xzv documentation/ maven/edu/wpi/first/ ./roborio/
+tar --one-top-level=wpilib-novsc-tmp --wildcards -xzv 'documentation/' 'maven/edu/wpi/first/' 'roborio/' 'LICENSE.md' 'ThirdPartyNotices.txt'
 
 for f in $(cat extract-list.txt); do
   unzip -o -d wpilib-novsc-tmp "wpilib-novsc-tmp/${f}"
@@ -57,7 +57,7 @@ cd ../
 
 # Pack and compress dist tarballs
 for distdir in "wpilib-novsc-athena" "wpilib-novsc-toolchain" "wpilib-novsc-sysroot" "wpilib-novsc-docs"; do
-  cat ./LICENSE.md ./ThirdPartyNotices.txt > ./${distdir}/LICENSE.txt
+  cat ./wpilib-novsc-tmp/LICENSE.md ./wpilib-novsc-tmp/ThirdPartyNotices.txt > ./${distdir}/LICENSE.txt
   tar -C ${distdir} -cvf "${distdir}.tar" .
   xz -9e "${distdir}.tar"
 done
