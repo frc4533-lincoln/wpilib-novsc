@@ -26,12 +26,12 @@ jobs:
       # Runs a single command using the runners shell
       - name: Generate extract list
         run: |
-          ./genExtractList.sh
+          $GITHUB_WORKSPACE/wpilib-novsc/genExtractList.sh
 
       # Runs a set of commands using the runners shell
       - name: Package dist tarballs
         run: |
-          ./package.sh
+          $GITHUB_WORKSPACE/wpilib-novsc/package.sh
         
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.2
