@@ -28,6 +28,7 @@ cd ./wpilib-novsc-tmp/
 
 # Rename NI libs
 # Move libraries into dist
+mv ./linux/athena/shared/libRoboRIO_FRC_ChipObject.so.* ./linux/athena/shared/libRoboRIO_FRC_ChipObject.so
 mv ./linux/athena/shared/libvisa.so.* ./linux/athena/shared/libvisa.so
 mv ./linux/athena/shared/libFRC_NetworkCommunication.so.* ./linux/athena/shared/libFRC_NetworkCommunication.so
 mv ./linux/athena/shared/*.so ../wpilib-novsc-athena/usr/lib/
