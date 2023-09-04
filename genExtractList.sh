@@ -7,7 +7,7 @@ ver='2023.4.3'
 ni_ver='2023.3.0'
 
 if ! [ -e extract-list.txt ]; then
-    rm extract-list.txt
+    rm -f extract-list.txt
 fi
 
 touch extract-list.txt
