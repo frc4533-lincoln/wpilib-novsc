@@ -9,7 +9,7 @@ fi
 
 curl -sL "${WPILIB_BUILD_URL}" | \
 tar -Oxzv "WPILib_Linux-${WPILIB_VERSION}/WPILib_Linux-${WPILIB_VERSION}-artifacts.tar.gz" | \
-tar --one-top-level=wpilib-novsc-tmp --wildcards -xzv './documentation/' './maven/edu/wpi/first/' './roborio/' './LICENSE.md' './ThirdPartyNotices.txt'
+tar --one-top-level=wpilib-novsc-tmp --wildcards -xzv 'documentation/' 'maven/edu/wpi/first/' './roborio/'
 
 for f in $(cat extract-list.txt); do
   unzip -o -d wpilib-novsc-tmp "wpilib-novsc-tmp/${f}"
