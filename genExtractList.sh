@@ -17,7 +17,7 @@ for lib in wpilibc wpimath wpinet wpiutil hal ntcore wpilibNewCommands; do
     echo "maven/edu/wpi/first/${lib}/${lib}-cpp/${ver}/${lib}-cpp-${ver}-linuxathena.zip" >> extract-list.txt
 done
 
-for lib in runtime netcomm visa; do
+for lib in runtime chipobject netcomm visa; do
     echo "maven/edu/wpi/first/ni-libraries/${lib}/${ni_ver}/${lib}-${ni_ver}-headers.zip" >> extract-list.txt
     echo "maven/edu/wpi/first/ni-libraries/${lib}/${ni_ver}/${lib}-${ni_ver}-linuxathena.zip" >> extract-list.txt
 done
