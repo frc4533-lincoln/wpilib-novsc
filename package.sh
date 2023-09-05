@@ -20,7 +20,7 @@ done
 
 # Create dist directory structure
 mkdir -p ./wpilib-novsc-athena/usr/lib/ ./wpilib-novsc-athena/usr/include/ \
-  ./wpilib-novsc-toolchain/usr/bin/ \
+  ./wpilib-novsc-toolchain/usr/bin/ ./wpilib-novsc-toolchain/usr/libexec/ \
   ./wpilib-novsc-sysroot/ \
   ./wpilib-novsc-docs/cpp/ ./wpilib-novsc-docs/frc/
 
@@ -47,6 +47,7 @@ mv ./documentation/rtd/* ../wpilib-novsc-docs/frc/
 
 # Move roborio toolchain into dist
 mv ./roborio/bin/* ../wpilib-novsc-toolchain/usr/bin/
+mv ./roborio/libexec ../wpilib-novsc-toolchain/usr/libexec/
 
 # Remove debug info and source code from roborio sysroot
 # Move roborio sysroot into dist
