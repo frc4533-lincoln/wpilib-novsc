@@ -30,3 +30,10 @@ You need #1 and #2. You probably want #3. You may want #4.
  2. [roboRIO toolchain](https://github.com/frc4533-lincoln/wpilib-novsc/releases/latest/download/wpilib-novsc-toolchain.tar.xz)
  3. [roboRIO sysroot](https://github.com/frc4533-lincoln/wpilib-novsc/releases/latest/download/wpilib-novsc-sysroot.tar.xz)
  4. [WPILib C++ and FRC documentation](https://github.com/frc4533-lincoln/wpilib-novsc/releases/latest/download/wpilib-novsc-docs.tar.xz)
+
+## Examples
+
+There's no official example(s) or template(s) at this time, but here's some projects using it:
+ - [Our own](https://github.com/4533-phoenix/chalkydri)
+
+If you're using it, open a Github issue and I'd be happy to add it to this list.
