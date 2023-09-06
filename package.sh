@@ -52,6 +52,7 @@ for f in ./roborio/bin/*; do
   # Generate a wrapper and write to dist
   printf '#!/bin/sh\n\nCOMPILER_PATH="$(pwd)/../libexec/wpilib-novsc/roborio/bin" ' > "../wpilib-novsc-toolchain/usr/bin/${f##./roborio/bin/}"
   printf "%s/../libexec/wpilib-novsc/gcc/bin/${f##./roborio/bin/}\n" '$(pwd)' >> "../wpilib-novsc-toolchain/usr/bin/${f##./roborio/bin/}"
+
 done
 mv ./roborio/libexec/* ../wpilib-novsc-toolchain/usr/libexec/wpilib-novsc/gcc/libexec/
 mv ./roborio/arm-nilrt-linux-gnueabi/bin/* ../wpilib-novsc-toolchain/usr/libexec/wpilib-novsc/roborio/bin/
