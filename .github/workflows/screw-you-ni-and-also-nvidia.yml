@@ -22,5 +22,5 @@ jobs:
           git config user.email "132951735+frc4533-lincoln@users.noreply.github.com"
           git config user.name "frc4533-lincoln"
           git add *
-          git commit -m 'actions: Auto-update'
+          git commit --allow-empty -m 'actions: Auto-update'
           git push
