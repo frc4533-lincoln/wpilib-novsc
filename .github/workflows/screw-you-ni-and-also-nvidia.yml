@@ -16,7 +16,7 @@ jobs:
           pip install PyGithub tomli-w
       - name: Generate
         run: |
-          python3 genFrcutilReleases.py > frcutil_releases.toml
+          python3 genFrcutilReleases.py
       - name: Commit
         run: |
           git config user.email "132951735+frc4533-lincoln@users.noreply.github.com"
