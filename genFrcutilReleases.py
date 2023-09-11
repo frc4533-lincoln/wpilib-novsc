@@ -9,60 +9,56 @@ import tomli_w
 from github import Github
 
 toml = {
-    "toolchain_releases": {},
-    "wpilib_releases": {},
-    "ni_releases": {},
+    'toolchain_releases': {},
+    'wpilib_releases': {},
+    'ni_releases': {},
 }
 
 g = Github()
 
-wpiorg = g.get_organization("wpilibsuite")
+wpiorg = g.get_organization('wpilibsuite')
 
 def toolchain():
-    global toml
     rels = toml['toolchain_releases']
 
-    for rel in wpiorg.get_repo("opensdk").get_releases():
-        version = rel.tag_name.removeprefix("v")
+    for rel in wpiorg.get_repo('opensdk').get_releases():
+        version = rel.tag_name.removeprefix('v')
 
-        [year, rev] = version.split("-")
+        [year, rev] = version.split('-')
 
         if int(rev) >= 7:
-            if not rels.__contains__(year):
+            if year not in rels:
                 rels[year] = {}
-            if not rels[year].__contains__(version):
+            if version not in rels[year]:
                 rels[year][version] = {}
 
             for asset in rel.assets:
                 if (asset.name.startswith("cortexa9") and int(rev) >= 7):
-                    print(f" > {asset.name}")
-
                     parts = asset.name \
-                        .removeprefix("cortexa9_vfpv3-roborio-academic-") \
-                        .removesuffix(".tgz") \
-                        .removesuffix(".zip") \
-                        .split("-")
+                        .removeprefix('cortexa9_vfpv3-roborio-academic-') \
+                        .removesuffix('.tgz') \
+                        .removesuffix('.zip') \
+                        .split('-')
 
                     # Length checked to handle this properly:
                     #     cortexa9_vfpv3-roborio-academic-2023-aarch64-bullseye-linux-gnu-Toolchain-12.1.0.tgz
-                    if parts.__len__() == 6:
+                    if len(parts) == 6:
                         [_, arch, os, _, _, gcc_version] = parts
                     else:
                         [_, arch, _, os, _, _, gcc_version] = parts
 
-                    rels[year][version][f"{os}-{arch}"] = asset.browser_download_url
+                    rels[year][version][f'{os}-{arch}'] = asset.browser_download_url
 
 def wpilib():
-    global toml
     rels = toml['wpilib_releases']
 
-    for rel in wpiorg.get_repo("allwpilib").get_releases():
-        version = rel.tag_name.removeprefix("v")
+    for rel in wpiorg.get_repo('allwpilib').get_releases():
+        version = rel.tag_name.removeprefix('v')
 
-        year = version.split(".")[0]
+        year = version.split('.')[0]
 
-        if not rels.__contains__(year):
-            rels[year] = {"unstable": [], "stable": []}
+        if year not in rels:
+            rels[year] = {'unstable': [], 'stable': []}
 
         if rel.prerelease:
             rels[year]['unstable'] += [version]
@@ -71,10 +67,9 @@ def wpilib():
 
 def ni_libs():
     for lib in ['chipobject', 'netcomm', 'runtime', 'visa']:
-        body = requests.get(f"https://frcmaven.wpi.edu/artifactory/release/edu/wpi/first/ni-libraries/{lib}/maven-metadata.xml").content
-        f = open("/tmp/maven-metadata.xml", 'w')
-        f.write(body.decode('utf8'))
-        f.close()
+        body = requests.get(f'https://frcmaven.wpi.edu/artifactory/release/edu/wpi/first/ni-libraries/{lib}/maven-metadata.xml').content
+        with open('/tmp/maven-metadata.xml', 'wb') as f:
+            f.write(body)
 
         versions = []
 
@@ -85,11 +80,11 @@ def ni_libs():
         versions.reverse()
 
         for version in versions:
-            year = version.split(".")[0]
+            year = version.split('.')[0]
 
-            if not toml['ni_releases'].__contains__(lib):
+            if lib not in toml['ni_releases']:
                 toml['ni_releases'][lib] = {}
-            if not toml['ni_releases'][lib].__contains__(year):
+            if year not in toml['ni_releases'][lib]:
                 toml['ni_releases'][lib][year] = []
 
             toml['ni_releases'][lib][year] += [version]
@@ -98,5 +93,5 @@ toolchain()
 wpilib()
 ni_libs()
 
-f = open('frcutil_releases.toml', 'w')
-f.write(tomli_w.dumps(toml))
+with open('frcutil_releases.toml', 'w') as f:
+    tomli_w.dumps(toml, f)
