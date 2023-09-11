@@ -98,4 +98,5 @@ toolchain()
 wpilib()
 ni_libs()
 
-print(tomli_w.dumps(toml))
+f = open('frcutil_releases.toml', 'w')
+f.write(tomli_w.dumps(toml))
