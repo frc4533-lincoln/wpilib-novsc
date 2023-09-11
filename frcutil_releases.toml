@@ -1,21 +1,3 @@
- > cortexa9_vfpv3-roborio-academic-2023-aarch64-bullseye-linux-gnu-Toolchain-12.1.0.tgz
- > cortexa9_vfpv3-roborio-academic-2023-arm64-apple-darwin-Toolchain-12.1.0.tgz
- > cortexa9_vfpv3-roborio-academic-2023-armv6-bullseye-linux-gnueabihf-Toolchain-12.1.0.tgz
- > cortexa9_vfpv3-roborio-academic-2023-x86_64-apple-darwin-Toolchain-12.1.0.tgz
- > cortexa9_vfpv3-roborio-academic-2023-x86_64-linux-gnu-Toolchain-12.1.0.tgz
- > cortexa9_vfpv3-roborio-academic-2023-x86_64-w64-mingw32-Toolchain-12.1.0.zip
- > cortexa9_vfpv3-roborio-academic-2023-aarch64-bullseye-linux-gnu-Toolchain-12.1.0.tgz
- > cortexa9_vfpv3-roborio-academic-2023-arm64-apple-darwin-Toolchain-12.1.0.tgz
- > cortexa9_vfpv3-roborio-academic-2023-armv6-bullseye-linux-gnueabihf-Toolchain-12.1.0.tgz
- > cortexa9_vfpv3-roborio-academic-2023-x86_64-apple-darwin-Toolchain-12.1.0.tgz
- > cortexa9_vfpv3-roborio-academic-2023-x86_64-linux-gnu-Toolchain-12.1.0.tgz
- > cortexa9_vfpv3-roborio-academic-2023-x86_64-w64-mingw32-Toolchain-12.1.0.zip
- > cortexa9_vfpv3-roborio-academic-2023-aarch64-bullseye-linux-gnu-Toolchain-12.1.0.tgz
- > cortexa9_vfpv3-roborio-academic-2023-arm64-apple-darwin-Toolchain-12.1.0.tgz
- > cortexa9_vfpv3-roborio-academic-2023-armv6-bullseye-linux-gnueabihf-Toolchain-12.1.0.tgz
- > cortexa9_vfpv3-roborio-academic-2023-x86_64-apple-darwin-Toolchain-12.1.0.tgz
- > cortexa9_vfpv3-roborio-academic-2023-x86_64-linux-gnu-Toolchain-12.1.0.tgz
- > cortexa9_vfpv3-roborio-academic-2023-x86_64-w64-mingw32-Toolchain-12.1.0.zip
 [toolchain_releases.2023.2023-9]
 linux-aarch64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-9/cortexa9_vfpv3-roborio-academic-2023-aarch64-bullseye-linux-gnu-Toolchain-12.1.0.tgz"
 apple-arm64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-9/cortexa9_vfpv3-roborio-academic-2023-arm64-apple-darwin-Toolchain-12.1.0.tgz"
@@ -224,4 +206,3 @@ stable = [
     "2020.9.1",
     "2020.7.2",
 ]
-
