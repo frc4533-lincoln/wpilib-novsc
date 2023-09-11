@@ -1,0 +1,227 @@
+ > cortexa9_vfpv3-roborio-academic-2023-aarch64-bullseye-linux-gnu-Toolchain-12.1.0.tgz
+ > cortexa9_vfpv3-roborio-academic-2023-arm64-apple-darwin-Toolchain-12.1.0.tgz
+ > cortexa9_vfpv3-roborio-academic-2023-armv6-bullseye-linux-gnueabihf-Toolchain-12.1.0.tgz
+ > cortexa9_vfpv3-roborio-academic-2023-x86_64-apple-darwin-Toolchain-12.1.0.tgz
+ > cortexa9_vfpv3-roborio-academic-2023-x86_64-linux-gnu-Toolchain-12.1.0.tgz
+ > cortexa9_vfpv3-roborio-academic-2023-x86_64-w64-mingw32-Toolchain-12.1.0.zip
+ > cortexa9_vfpv3-roborio-academic-2023-aarch64-bullseye-linux-gnu-Toolchain-12.1.0.tgz
+ > cortexa9_vfpv3-roborio-academic-2023-arm64-apple-darwin-Toolchain-12.1.0.tgz
+ > cortexa9_vfpv3-roborio-academic-2023-armv6-bullseye-linux-gnueabihf-Toolchain-12.1.0.tgz
+ > cortexa9_vfpv3-roborio-academic-2023-x86_64-apple-darwin-Toolchain-12.1.0.tgz
+ > cortexa9_vfpv3-roborio-academic-2023-x86_64-linux-gnu-Toolchain-12.1.0.tgz
+ > cortexa9_vfpv3-roborio-academic-2023-x86_64-w64-mingw32-Toolchain-12.1.0.zip
+ > cortexa9_vfpv3-roborio-academic-2023-aarch64-bullseye-linux-gnu-Toolchain-12.1.0.tgz
+ > cortexa9_vfpv3-roborio-academic-2023-arm64-apple-darwin-Toolchain-12.1.0.tgz
+ > cortexa9_vfpv3-roborio-academic-2023-armv6-bullseye-linux-gnueabihf-Toolchain-12.1.0.tgz
+ > cortexa9_vfpv3-roborio-academic-2023-x86_64-apple-darwin-Toolchain-12.1.0.tgz
+ > cortexa9_vfpv3-roborio-academic-2023-x86_64-linux-gnu-Toolchain-12.1.0.tgz
+ > cortexa9_vfpv3-roborio-academic-2023-x86_64-w64-mingw32-Toolchain-12.1.0.zip
+[toolchain_releases.2023.2023-9]
+linux-aarch64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-9/cortexa9_vfpv3-roborio-academic-2023-aarch64-bullseye-linux-gnu-Toolchain-12.1.0.tgz"
+apple-arm64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-9/cortexa9_vfpv3-roborio-academic-2023-arm64-apple-darwin-Toolchain-12.1.0.tgz"
+linux-armv6 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-9/cortexa9_vfpv3-roborio-academic-2023-armv6-bullseye-linux-gnueabihf-Toolchain-12.1.0.tgz"
+apple-x86_64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-9/cortexa9_vfpv3-roborio-academic-2023-x86_64-apple-darwin-Toolchain-12.1.0.tgz"
+linux-x86_64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-9/cortexa9_vfpv3-roborio-academic-2023-x86_64-linux-gnu-Toolchain-12.1.0.tgz"
+w64-x86_64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-9/cortexa9_vfpv3-roborio-academic-2023-x86_64-w64-mingw32-Toolchain-12.1.0.zip"
+
+[toolchain_releases.2023.2023-8]
+linux-aarch64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-8/cortexa9_vfpv3-roborio-academic-2023-aarch64-bullseye-linux-gnu-Toolchain-12.1.0.tgz"
+apple-arm64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-8/cortexa9_vfpv3-roborio-academic-2023-arm64-apple-darwin-Toolchain-12.1.0.tgz"
+linux-armv6 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-8/cortexa9_vfpv3-roborio-academic-2023-armv6-bullseye-linux-gnueabihf-Toolchain-12.1.0.tgz"
+apple-x86_64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-8/cortexa9_vfpv3-roborio-academic-2023-x86_64-apple-darwin-Toolchain-12.1.0.tgz"
+linux-x86_64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-8/cortexa9_vfpv3-roborio-academic-2023-x86_64-linux-gnu-Toolchain-12.1.0.tgz"
+w64-x86_64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-8/cortexa9_vfpv3-roborio-academic-2023-x86_64-w64-mingw32-Toolchain-12.1.0.zip"
+
+[toolchain_releases.2023.2023-7]
+linux-aarch64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-7/cortexa9_vfpv3-roborio-academic-2023-aarch64-bullseye-linux-gnu-Toolchain-12.1.0.tgz"
+apple-arm64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-7/cortexa9_vfpv3-roborio-academic-2023-arm64-apple-darwin-Toolchain-12.1.0.tgz"
+linux-armv6 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-7/cortexa9_vfpv3-roborio-academic-2023-armv6-bullseye-linux-gnueabihf-Toolchain-12.1.0.tgz"
+apple-x86_64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-7/cortexa9_vfpv3-roborio-academic-2023-x86_64-apple-darwin-Toolchain-12.1.0.tgz"
+linux-x86_64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-7/cortexa9_vfpv3-roborio-academic-2023-x86_64-linux-gnu-Toolchain-12.1.0.tgz"
+w64-x86_64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-7/cortexa9_vfpv3-roborio-academic-2023-x86_64-w64-mingw32-Toolchain-12.1.0.zip"
+
+[wpilib_releases.2024]
+unstable = [
+    "2024.0.0-alpha-1",
+]
+stable = []
+
+[wpilib_releases.2023]
+unstable = [
+    "2023.3.1",
+    "2023.1.1-beta-7",
+    "2023.1.1-beta-6",
+    "2023.1.1-beta-5",
+    "2023.1.1-beta-4",
+    "2023.1.1-beta-3",
+    "2023.1.1-beta-2",
+]
+stable = [
+    "2023.4.3",
+    "2023.4.2",
+    "2023.4.1",
+    "2023.3.2",
+    "2023.2.1",
+    "2023.1.1",
+]
+
+[wpilib_releases.2022]
+unstable = [
+    "2022.1.1-rc-1",
+    "2022.1.1-beta-4",
+    "2022.1.1-beta-3",
+    "2022.1.1-beta-2",
+    "2022.1.1-beta-1",
+    "2022.1.1-alpha-3",
+    "2022.1.1-alpha-2",
+]
+stable = [
+    "2022.4.1",
+    "2022.3.1",
+    "2022.2.1",
+    "2022.1.1",
+]
+
+[wpilib_releases.2021]
+unstable = [
+    "2021.1.1-beta-4",
+]
+stable = [
+    "2021.3.1",
+    "2021.2.2",
+    "2021.2.1",
+    "2021.1.2",
+]
+
+[wpilib_releases.2020]
+unstable = []
+stable = [
+    "2020.3.2",
+    "2020.2.2",
+    "2020.1.2",
+    "2020.1.1",
+]
+
+[wpilib_releases.2019]
+unstable = []
+stable = [
+    "2019.4.1",
+    "2019.3.2",
+    "2019.2.1",
+    "2019.1.1",
+]
+
+[ni_releases.chipobject]
+2023 = [
+    "2023.3.0",
+    "2023.2.1",
+    "2023.2.0",
+    "2023.1.0",
+]
+2022 = [
+    "2022.4.0",
+    "2022.2.3",
+    "2022.2.2",
+    "2022.2.1",
+    "2022.2.0",
+    "2022.0.0",
+]
+2020 = [
+    "2020.10.1",
+    "2020.9.2",
+    "2020.9.1",
+    "2020.7.2",
+    "2020.7.1",
+    "2020.6.1",
+    "2020.5.2",
+    "2020.5.1",
+    "2020.4.1",
+    "2020.3.1",
+    "2020.2.2",
+    "2020.2.1",
+    "2020.2.0",
+]
+2019 = [
+    "2019.12.3",
+    "2019.12.2",
+]
+
+[ni_releases.netcomm]
+2023 = [
+    "2023.3.0",
+    "2023.2.1",
+    "2023.2.0",
+    "2023.1.0",
+]
+2022 = [
+    "2022.4.0",
+    "2022.2.3",
+    "2022.2.2",
+    "2022.2.1",
+    "2022.2.0",
+    "2022.0.0",
+]
+2020 = [
+    "2020.10.1",
+    "2020.9.2",
+    "2020.9.1",
+    "2020.7.2",
+    "2020.7.1",
+    "2020.6.1",
+    "2020.5.2",
+    "2020.5.1",
+    "2020.4.1",
+    "2020.3.1",
+    "2020.2.2",
+    "2020.2.1",
+    "2020.2.0",
+]
+2019 = [
+    "2019.12.3",
+    "2019.12.2",
+]
+
+[ni_releases.runtime]
+2023 = [
+    "2023.3.0",
+    "2023.2.1",
+    "2023.2.0",
+    "2023.1.0",
+]
+2022 = [
+    "2022.4.0",
+    "2022.2.3",
+    "2022.2.2",
+]
+2020 = [
+    "2020.10.1",
+    "2020.9.2",
+    "2020.9.1",
+    "2020.7.2",
+    "2020.7.1",
+    "2020.6.1",
+    "2020.5.2",
+]
+
+[ni_releases.visa]
+2023 = [
+    "2023.3.0",
+    "2023.2.1",
+    "2023.2.0",
+    "2023.1.0",
+]
+2022 = [
+    "2022.4.0",
+    "2022.2.3",
+    "2022.2.2",
+    "2022.2.1",
+    "2022.2.0",
+    "2022.0.0",
+]
+2020 = [
+    "2020.10.1",
+    "2020.9.2",
+    "2020.9.1",
+    "2020.7.2",
+]
+
