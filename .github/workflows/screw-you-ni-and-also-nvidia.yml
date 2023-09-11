@@ -19,6 +19,8 @@ jobs:
           python3 genFrcutilReleases.py > $GITHUB_WORKSPACE/frcutil_releases.toml
       - name: Commit
         run: |
+          git config user.email "132951735+frc4533-lincoln@users.noreply.github.com"
+          git config user.name "frc4533-lincoln"
           git add *
           git commit -m 'Update frcutil releases'
           git push
