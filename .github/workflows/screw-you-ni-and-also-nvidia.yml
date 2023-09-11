@@ -11,16 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Generate extract list
+      - name: Install Python dependencies
         run: |
-          chmod +x $GITHUB_WORKSPACE/genExtractList.sh && \
-          $GITHUB_WORKSPACE/genExtractList.sh
-      - name: Package dist tarballs
+          pip install PyGithub tomli-w
+      - name: Generate
         run: |
-          chmod +x $GITHUB_WORKSPACE/package.sh && \
-          $GITHUB_WORKSPACE/package.sh
-      - name: Upload tarballs to Github releases
-        uses: softprops/action-gh-release@v1
-        with:
-          files: |
-            ./dist/wpilib-novsc-*.tar.xz
+          python3 genFrcutilReleases.py > $GITHUB_WORKSPACE/frcutil_releases.toml
+      - name: Commit
+        run: |
+          git add *
+          git commit -m 'Update frcutil releases'
+          git push
