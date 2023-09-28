@@ -14,14 +14,6 @@ apple-x86_64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-8
 linux-x86_64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-8/cortexa9_vfpv3-roborio-academic-2023-x86_64-linux-gnu-Toolchain-12.1.0.tgz"
 w64-x86_64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-8/cortexa9_vfpv3-roborio-academic-2023-x86_64-w64-mingw32-Toolchain-12.1.0.zip"
 
-[toolchain_releases.2023.2023-7]
-linux-aarch64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-7/cortexa9_vfpv3-roborio-academic-2023-aarch64-bullseye-linux-gnu-Toolchain-12.1.0.tgz"
-apple-arm64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-7/cortexa9_vfpv3-roborio-academic-2023-arm64-apple-darwin-Toolchain-12.1.0.tgz"
-linux-armv6 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-7/cortexa9_vfpv3-roborio-academic-2023-armv6-bullseye-linux-gnueabihf-Toolchain-12.1.0.tgz"
-apple-x86_64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-7/cortexa9_vfpv3-roborio-academic-2023-x86_64-apple-darwin-Toolchain-12.1.0.tgz"
-linux-x86_64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-7/cortexa9_vfpv3-roborio-academic-2023-x86_64-linux-gnu-Toolchain-12.1.0.tgz"
-w64-x86_64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-7/cortexa9_vfpv3-roborio-academic-2023-x86_64-w64-mingw32-Toolchain-12.1.0.zip"
-
 [wpilib_releases.2024]
 unstable = [
     "2024.0.0-alpha-1",
