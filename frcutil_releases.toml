@@ -24,6 +24,7 @@ w64-x86_64 = "https://github.com/wpilibsuite/opensdk/releases/download/v2023-7/c
 
 [wpilib_releases.2024]
 unstable = [
+    "2024.1.1-beta-1",
     "2024.0.0-alpha-1",
 ]
 stable = []
