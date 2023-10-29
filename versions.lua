@@ -39,3 +39,4 @@ return {
   { tag = '2019.3.2', stable = true }
   { tag = '2019.2.1', stable = true }
   { tag = '2019.1.1', stable = true }
+}
