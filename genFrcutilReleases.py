@@ -101,5 +101,5 @@ ni_libs()
 with open('frcutil_releases.toml', 'wb') as f:
     tomli_w.dump(toml, f)
 with open('versions.lua', 'w', encoding='utf8') as f:
-    ''.join([lua, '}'])
+    lua = ''.join([lua, '}'])
     f.write(lua)
