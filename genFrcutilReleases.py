@@ -18,8 +18,7 @@ g = Github()
 
 wpiorg = g.get_organization('wpilibsuite')
 
-lua = []
-lua += ['return {\n']
+lua = 'return {\n'
 
 def toolchain():
     rels = toml['toolchain_releases']
@@ -53,6 +52,7 @@ def toolchain():
                     rels[year][version][f'{os}-{arch}'] = asset.browser_download_url
 
 def wpilib():
+    global lua
     rels = toml['wpilib_releases']
 
     for rel in wpiorg.get_repo('allwpilib').get_releases():
@@ -65,10 +65,10 @@ def wpilib():
 
         if rel.prerelease:
             rels[year]['unstable'] += [version]
-            lua += [f'  {{ tag = \'{version}\', stable = false }}\n']
+            lua = ''.join([lua, f'  {{ tag = \'{version}\', stable = false }}\n'])
         else:
             rels[year]['stable'] += [version]
-            lua += [f'  {{ tag = \'{version}\', stable = true }}\n']
+            lua = ''.join([lua, f'  {{ tag = \'{version}\', stable = true }}\n'])
 
 def ni_libs():
     for lib in ['chipobject', 'netcomm', 'runtime', 'visa']:
@@ -101,5 +101,5 @@ ni_libs()
 with open('frcutil_releases.toml', 'wb') as f:
     tomli_w.dump(toml, f)
 with open('versions.lua', 'w', encoding='utf8') as f:
-    lua += ['}']
-    f.write(''.join(lua))
+    ''.join([lua, '}'])
+    f.write(lua)
