@@ -18,7 +18,8 @@ g = Github()
 
 wpiorg = g.get_organization('wpilibsuite')
 
-lua = 'return {\n'
+lua = []
+lua += ['return {\n']
 
 def toolchain():
     rels = toml['toolchain_releases']
@@ -64,10 +65,10 @@ def wpilib():
 
         if rel.prerelease:
             rels[year]['unstable'] += [version]
-            lua += f'  {{ tag = \'{version}\', stable = false }}\n'
+            lua += [f'  {{ tag = \'{version}\', stable = false }}\n']
         else:
             rels[year]['stable'] += [version]
-            lua += f'  {{ tag = \'{version}\', stable = true }}\n'
+            lua += [f'  {{ tag = \'{version}\', stable = true }}\n']
 
 def ni_libs():
     for lib in ['chipobject', 'netcomm', 'runtime', 'visa']:
@@ -100,5 +101,5 @@ ni_libs()
 with open('frcutil_releases.toml', 'wb') as f:
     tomli_w.dump(toml, f)
 with open('versions.lua', 'w', encoding='utf8') as f:
-    lua += '}'
-    f.write(lua)
+    lua += ['}']
+    f.write(''.join(lua))
