@@ -65,10 +65,12 @@ def wpilib():
 
         if rel.prerelease:
             rels[year]['unstable'] += [version]
-            lua = ''.join([lua, f'  {{ tag = \'{version}\', stable = false }}\n'])
+            if not ('2016' in version or '2017' in version or '2018' in version):
+                lua = ''.join([lua, f'  {{ tag = \'{version}\', stable = false }},\n'])
         else:
             rels[year]['stable'] += [version]
-            lua = ''.join([lua, f'  {{ tag = \'{version}\', stable = true }}\n'])
+            if not ('2016' in version or '2017' in version or '2018' in version):
+                lua = ''.join([lua, f'  {{ tag = \'{version}\', stable = true }},\n'])
 
 def ni_libs():
     for lib in ['chipobject', 'netcomm', 'runtime', 'visa']:
